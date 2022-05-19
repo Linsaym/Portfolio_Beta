@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width">
 	<title>Лев Загвоздкин</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="shortcut icon" href="img/logo.png">
@@ -18,12 +18,12 @@
 				<div class="header__left">
 					<img src="img/logo.png" alt="logo" class="logo">
 					<div class="name">
-						<p class="name_main">Лев загвоздкин</p>
+						<p class="name_main">Лев Загвоздкин</p>
 						<p class="name_dis">Веб разработчик</p>
 					</div>
 				</div>
 				<div class="header__right" id="jobs">
-					<a href="#portfolio">Мои работы</a>
+					<a id="MyJobs_header" href="#portfolio">Мои работы</a>
 					<a href="#" onclick="swa()">Контакты</a>
 				</div>
 			</div>
@@ -34,16 +34,18 @@
 			<section class="body_title_all">
 				<div class="body_title">
 					<p>Привет, меня зовут</p>
-					<h1>Лев Загвоздкин</h1>
+					<h1 id="Body_name">Лев Загвоздкин</h1>
 					<h6>Я разрабатываю сайты:</h6>
 					<ul>
 						<li>Верстка на HTML/CSS</li>
 						<li>Оживление веб-страниц с помощью JavaScript</li>
 					</ul>
-					<button class="btn" id="btn1"><a href="https://vk.com/linsaym" target="_blank">Написать мне</a></button>
-					<button class="btn" id="btn2"><a href="https://krasnoyarsk.hh.ru/resume/bac84cfbff09e5a8520039ed1f376163793839" target="_blank">Мое резюме</a></button>
+					<div class="btns_body">
+						<button class="btn" id="btn1"><a href="https://vk.com/linsaym" target="_blank">Написать мне</a></button>
+						<button class="btn" id="btn2"><a href="https://krasnoyarsk.hh.ru/resume/bac84cfbff09e5a8520039ed1f376163793839" target="_blank">Мое резюме</a></button>
+					</div>
 				</div>
-				<img src="img/ava.png" alt="avatar">
+				<img src="img/ava.png" alt="avatar" id="avatar">
 			</section>
 			<div class="portfolio">
 				<h1>Портфолио</h1>

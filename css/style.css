@@ -20,16 +20,21 @@ header, footer{
 	overflow: hidden;
 }
 footer{
-	min-height: 150px;
+	height: 100%;
+	max-height: 150px;
 	overflow: hidden;
 }
 main{
 	background-color: #ECF4FF;
-	min-height: 1750px;
+}
+#jobs a:hover{
+	transform: scale(1.1);
+}
+#jobs a{
+	transition: 1s;
 }
 .container{
-	margin: 0px 150px;
-	max-width: 85%;
+	padding: 0px 150px;
 }
 .header{
 	display: flex;
@@ -41,7 +46,8 @@ main{
 	align-items: center;
 }
 .logo{
-	width: 56px;
+	width: 100%;
+	max-width: 56px;
 }
 .name{
 	font-weight: 500;
@@ -77,6 +83,10 @@ header .header__right a{
 	padding: 20px 50px;
 	border-radius: 36px;
 	border: 2px solid #FFFFFF;
+	transition: 1s;
+}
+.btn:hover{
+	transform: scale(1.1);
 }
 .btn a{
 	font-size: 24px;
@@ -142,65 +152,181 @@ header .header__right a{
 	max-width: 100%;
 	padding: 30px;
 	margin-bottom: 20px;
+	transition: 1s;
+}
+.block img:hover{
+	transform: scale(1.2);
 }
 #overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 999;
-    overflow: auto;
-    visibility:hidden;
-    opacity: 0;
-    transition: opacity 0.7s ease-in 0s;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	z-index: 999;
+	overflow: auto;
+	visibility:hidden;
+	opacity: 0;
+	transition: opacity 0.7s ease-in 0s;
 }
 .popup {
-    top: 10%;
-    left: 0;
-    right: 0;       
-    font-size: 14px;
-    margin: auto;
-    width: 80%;
-    min-width: 300px;
-    max-width: 620px;
-    position: absolute;
-    padding: 15px 20px;
-    border: 1px solid #666;
-    background-color: #fefefe;
-    z-index: 1000;
-    border-radius: 10px;
-    font: 30px/40px 'Tahoma', Arial, sans-serif;
-    box-shadow: 0 0px 14px rgba(0, 0, 0, 0.4);
+	top: 10%;
+	left: 0;
+	right: 0;       
+	font-size: 14px;
+	margin: auto;
+	width: 80%;
+	min-width: 300px;
+	max-width: 620px;
+	position: absolute;
+	padding: 15px 20px;
+	border: 1px solid #666;
+	background-color: #fefefe;
+	z-index: 1000;
+	border-radius: 10px;
+	font: 30px/40px 'Tahoma', Arial, sans-serif;
+	box-shadow: 0 0px 14px rgba(0, 0, 0, 0.4);
 }
 .popup p a{
 	color: #191919;
 }
 .close {
-    top: 10px;
-    right: 10px;
-    width: 32px;
-    height: 32px;
-    position: absolute;
-    border: none;
-    border-radius: 50%;
-    background-color: rgba(0, 130, 230, 0.9);
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    cursor: pointer;
-    outline: none;
+	top: 10px;
+	right: 10px;
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	border: none;
+	border-radius: 50%;
+	background-color: rgba(0, 130, 230, 0.9);
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	cursor: pointer;
+	outline: none;
 }
 .close:before {
-    color: rgba(255, 255, 255, 0.9);
-    content: "X";
-    font-family:  Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    font-weight: normal;
-    text-decoration: none;
-    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+	color: rgba(255, 255, 255, 0.9);
+	content: "X";
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	text-decoration: none;
+	text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
 }
 .close:hover {
-    background-color: rgba(180, 20, 14, 0.8);
+	background-color: rgba(180, 20, 14, 0.8);
 }
 #overlay .popup p.zag{margin:20px 0 10px;padding:0 0 6px;color:tomato;font-size:16px;font-weight:bold;border-bottom:1px solid tomato;}
 
+@media (max-width: 1540px) {
+	#avatar{display: none;}
+	.body_title{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.btns_body{
+		display: flex;
+		justify-content: space-between;
+	}
+}
+@media (min-width: 1335px) and (max-width: 1539px) {
+	.body_title p{
+		padding: 0px 100px;
+	}
+	#Body_name{
+		padding: 0px 100px;
+	}
+}
+@media (max-width: 1200px) {
+	#MyJobs_header{margin-left: 0px;}
+}
+@media (max-width: 1200px) {
+	.portfolio_list{
+		flex-direction: column;
+	}
+}
+@media (max-width: 1100px) {
+	.container{
+		padding: 0px 15px;
+	}
+	.body_title p{
+		padding: 0px 50px;
+	}
+	#Body_name{
+		padding: 0px 0px;
+	}
+}
+@media (max-width: 900px) {
+	#MyJobs_header{
+		margin-left: 0px;
+	}
+	#Body_name{
+		font-size: 60px;
+	}
+	#btn2{
+		margin-left: 50px;
+	}
+	ul,li{
+		text-align: center;
+	}
+	header .header__right a{
+		margin-left: 40px;
+	}
+}
+@media (max-width: 740px){
+	header .header__right{
+		display: none;
+	}
+	.footer .header__left{
+		display: none;
+	}
+	.footer{
+		justify-content: center;
+	}
+}
+@media (max-width: 560px){
+	#Body_name{
+		font-size: 40px;
+		line-height: 40px;
+	}
+	.body_title p{
+		
+	}
+	.body_title h6{
+		
+	}
+	.body_title ul{
+		margin: 10px 40px;
+		font-size: 26px;
+		line-height: 40px;
+	}
+	.btns_body{
+		margin-top: 0px;
+	}
+	#btn1{
+		margin-top: 20px;
+		margin-bottom: 40px;
+	}
+	#btn2{
+		display: none;
+	}
+}
+@media (max-width: 470px){
+	.body_title p{
+		margin-bottom: 40px;
+		font-size: 28px;
+		line-height: 38px;
+		padding: 0 0;
+		text-align: center;
+	}
+	.body_title h6,h1{
+		text-align: center;
+	}
+	.name{
+		margin-right: 0px;
+	}
+	.name_dis{
+		font-size: 18px;
+	}
+}
